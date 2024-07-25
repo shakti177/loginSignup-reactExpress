@@ -6,11 +6,13 @@ const EmployeeModel = require("./models/Employee");
 const app = express();
 app.use(express.json());
 
-app.use(cors({
-  origin: 'https://login-signup-frontend-one.vercel.app', 
-  methods: ['POST'], 
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(cors(
+    {
+        origin: ["https://login-signup-frontend-one.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 mongoose.connect("mongodb+srv://loginSignUpdata:Shakti@96446@cluster0.gxgqcm6.mongodb.net/Customers?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
