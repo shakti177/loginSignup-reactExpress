@@ -14,7 +14,7 @@ const SignUp = () => {
     e.preventDefault();
 
     axios
-      .post("https://login-signup-backend-phi.vercel.app/register", { name, email, password })
+      .post("http://login-signup-backend-phi.vercel.app/register", { name, email, password })
       .then((result) => {
         console.log(result);
         toast.success("Registration successful!", {
