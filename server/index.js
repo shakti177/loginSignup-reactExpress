@@ -9,7 +9,8 @@ app.use(cors(
   {
     origin:["https://login-signup-frontend-one.vercel.app"],
     methods:["POST", "GET"],
-    credentials: true
+    credentials: true,
+    optionsSuccessStatus: 200
   }
 ));
 
