@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.use(cors({
   origin: 'https://login-signup-frontend-one.vercel.app', 
-  methods: ['GET', 'POST'], 
+  methods: ['POST'], 
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
