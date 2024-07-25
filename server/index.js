@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: 'https://login-signup-frontend-one.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
