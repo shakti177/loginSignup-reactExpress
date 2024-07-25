@@ -11,7 +11,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-mongoose.connect("mongodb+srv://loginSignUpdata:Shakti@96446@cluster0.gxgqcm6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+mongoose.connect("mongodb+srv://loginSignUpdata:Shakti@96446@cluster0.gxgqcm6.mongodb.net/Customers?retryWrites=true&w=majority&appName=Cluster0");
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
