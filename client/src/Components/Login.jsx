@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     axios
-      .post("http://login-signup-backend-phi.vercel.app/login", { email, password })
+      .post("https://login-signup-backend-phi.vercel.app/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "success") {
