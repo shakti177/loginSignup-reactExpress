@@ -24,7 +24,7 @@ const SignUp = () => {
       })
       .catch((err) => {
         console.log(err);
-        toast.error("An error occurred during registration.");
+        toast.error(err);
       });
 
     setName("");
