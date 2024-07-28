@@ -13,21 +13,25 @@ const Login = () => {
     e.preventDefault();
 
     axios
-      .post("https://login-signup-backend-phi.vercel.app/login", { email, password })
+      .post("http://localhost:3001/login", { email, password })
       .then((result) => {
         console.log(result);
         if (result.data === "success") {
           toast.success("Logged in Sucessfully", {
-            autoClose: 3000,
+            autoClose: 1000,
             onClose: () => Navigate("/home"),
           });
         }
         if (result.data === "incorrect") {
-          toast.error("Incorrect Password");
+          toast.error("Incorrect Password", {
+            autoClose: 1000,
+          });
         }
 
         if (result.data === "No_record") {
-          toast.error("No record found");
+          toast.error("No record found", {
+            autoClose: 1000,
+          });
         }
       })
       .catch((err) => {
@@ -97,7 +101,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer pauseOnHover={false} />
     </div>
   );
 };
