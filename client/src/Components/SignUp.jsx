@@ -14,11 +14,11 @@ const SignUp = () => {
     e.preventDefault();
 
     axios
-      .post("https://login-signup-backend-phi.vercel.app/register", { name, email, password })
+      .post("http://localhost:3001/register", { name, email, password })
       .then((result) => {
         console.log(result);
         toast.success("Registration successful!", {
-          autoClose: 3000,
+          autoClose: 1000,
           onClose: () => navigate("/"),
         });
       })
@@ -105,7 +105,7 @@ const SignUp = () => {
         </div>
       </div>
 
-      <ToastContainer />
+      <ToastContainer pauseOnHover={false} />
     </div>
   );
 };
