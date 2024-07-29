@@ -22,6 +22,9 @@ mongoose.connect("mongodb+srv://loginSignUpdata:Shakti@96446@cluster0.gxgqcm6.mo
   console.error("MongoDB connection error:", err);
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
